@@ -2,7 +2,7 @@
    CONFIGURACIÓN DEL FONDO GENERAL
    ========================================================================== */
 body {
-    background-image: url('../img/fondoDePagina.jpg');
+    background-image: url('../img/FondoDePagina.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll */
