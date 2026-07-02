@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Estética & Salud</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nuestro CSS personalizado -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">N&N ESTETICA SALUD Y BELLEZA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tratamientos">Tratamientos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#staff">Nuestro Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. SECCIÓN DE INICIO (HERO) -->
+    <header id="inicio" class="bg-light py-5 text-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Tu belleza y bienestar en manos de profesionales</h1>
+            <p class="lead text-muted">Descubrí nuestros tratamientos personalizados y aparatología de última generación.</p>
+            <a href="#tratamientos" class="btn btn-primary btn-lg px-4 gap-3">Ver Tratamientos</a>
+        </div>
+    </header>
+
+    <!-- 3. SECCIÓN DE TRATAMIENTOS CON TUS IMÁGENES REALES -->
+    <section id="tratamientos" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase text-muted small fw-bold">Nuestros Servicios</span>
+                <h2 class="display-6 fw-bold mt-1">Tratamientos Especializados</h2>
+                <p class="text-muted">Elegí una categoría para ver lo que ofrecemos. Hacé clic para ver beneficios y contraindicaciones.</p>
+            </div>
+
+            <!-- Pestañas de Categorías -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="tratamientosTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active me-2" id="aparatologia-tab" data-bs-toggle="tab" data-bs-target="#aparatologia" type="button" role="tab">Aparatología Avanzada</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link me-2" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud" type="button" role="tab">Salud & Estética Corporal</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="peluqueria-tab" data-bs-toggle="tab" data-bs-target="#peluqueria" type="button" role="tab">Peluquería & Estilismo</button>
+                </li>
+            </ul>
+
+            <!-- Contenido de las Pestañas -->
+            <div class="tab-content mt-4" id="tratamientosTabsContent">
+                
+                <!-- PANE 1: APARATOLOGÍA -->
+                <div class="tab-pane fade show active" id="aparatologia" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- HIFU 22D Max -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/img.jpg.webp" class="card-img-top" alt="Tratamiento HIFU 22D Max" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">HIFU 22D Max</h5>
+                                    <p class="card-text text-muted flex-grow-1">Lifting facial y tensado corporal sin cirugías mediante ultrasonido focalizado.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalHifu">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Depilación Soprano -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/soprano.jpg.webp" class="card-img-top" alt="Depilación Definitiva Soprano" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Depilación Definitiva</h5>
+                                    <p class="card-text text-muted flex-grow-1">Sistema Unisex Soprano Ice Trío. Eficaz, seguro y rápido para todo tipo de piel.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalSoprano">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Criolipólisis Plana -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/criolipolisis.jpg" class="card-img-top" alt="Criolipólisis Plana" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Criolipólisis Plana</h5>
+                                    <p class="card-text text-muted flex-grow-1">Reducción de centímetros destruyendo las células adiposas mediante frío controlado.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCrio">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Body Up Pro / Velaslim / Lipolaser -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/vela.jpg" class="card-img-top" alt="Modelado Corporal Avanzado" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Body Up & Velaslim Plus</h5>
+                                    <p class="card-text text-muted flex-grow-1">Tratamiento combinado anticelulítico, reductor y reafirmante muscular profundo.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalModelado">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cama Solar Dr. Muller -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/CamaSolar.jpg" class="card-img-top" alt="Cama Solar Dr. Müller" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Cama Solar Dr. Müller</h5>
+                                    <p class="card-text text-muted flex-grow-1">Bronceado horizontal corporal y facial con tecnología europea segura.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCamaSolar">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PANE 2: SALUD Y BIENESTAR -->
+                <div class="tab-pane fade" id="salud" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- Masajes Descontracturantes -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/masajes.jpg" class="card-img-top" alt="Masajes Descontracturantes" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Masajes Descontracturantes</h5>
+                                    <p class="card-text text-muted flex-grow-1">Mejora notablemente dolores articulares y musculares acumulados.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalDescontracturante">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Drenaje Linfático y Post Op -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/drenaje.jpg" class="card-img-top" alt="Drenaje Linfático y Post-Operatorio" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Drenajes Post-Operatorios</h5>
+                                    <p class="card-text text-muted flex-grow-1">Especialistas en procesos post-quirúrgicos como abdominoplastias.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalDrenaje">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dermatocosmiatría -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/cosmeatria.jpg" class="card-img-top" alt="Dermatocosmiatría Especializada" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Dermatocosmiatría</h5>
+                                    <p class="card-text text-muted flex-grow-1">Tratamiento experto de patologías cutáneas: rosácea, piel atípica o diabética.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCosmiatria">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ <!-- PANE 3: PELUQUERÍA & ESTILISMO -->
+                <div class="tab-pane fade" id="peluqueria" role="tabpanel">
+                    <div class="row g-4">
+                        <!-- Barbería -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/corteHombre.jpg" class="card-img-top" alt="Barbería Profesional" style="height: 220px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Barbería</h5>
+                                    <p class="card-text text-muted flex-grow-1">Servicio especializado en cortes de pelo, color global y mechas adaptadas a las últimas tendencias urbanas.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalBarberia">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cortes y Color Mujer -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/corteMujer.jpg" class="card-img-top" alt="Estilismo Cortes y Color" style="height: 220px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Corte, Estilismo & Color</h5>
+                                    <p class="card-text text-muted flex-grow-1">Diseño de cortes, reflejos, claritos, color completo y mantenimiento de raíces para ellas.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalPeluCompleta">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tratamientos capilares -->
+                        <div class="col-md-4">
+                            <div class="card h-100 card-tratamiento shadow-sm overflow-hidden">
+                                <img src="img/capilar.jpg" class="card-img-top" alt="Nutrición Botox y Alisados" style="height: 220px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h5 class="card-title fw-bold">Nutrición, Botox & Alisados</h5>
+                                    <p class="card-text text-muted flex-grow-1">Tratamientos anti-frizz avanzados y nutrición profunda para recuperar el cabello.</p>
+                                    <button class="btn btn-outline-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCapilar">Ver Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- 4. SECCIÓN NUESTRO EQUIPO -->
+    <section id="staff" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase text-muted small fw-bold">Profesionales</span>
+                <h2 class="display-6 fw-bold mt-1">Nuestro Equipo Experto</h2>
+                <p class="text-muted">Conocé a los especialistas encargados de cuidar tu salud, estética y bienestar.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Profesional 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 text-center shadow-sm p-4 h-100 card-tratamiento">
+                        <div class="mx-auto mb-3 rounded-circle bg-secondary d-flex align-items-center justify-content-center" style="width: 120px; height: 120px; overflow: hidden;">
+                            <i class="bi bi-person-fill text-white display-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-1">Especialista en Bienestar</h5>
+                        <p class="text-primary small mb-2">Masajista y Aux. en Kinesiología</p>
+                        <p class="text-muted small">Orientada en fisioterapia hospitalaria. Experta en masajes descontracturantes, reductores y drenajes linfáticos post-operatorios.</p>
+                    </div>
+                </div>
+                <!-- Profesional 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 text-center shadow-sm p-4 h-100 card-tratamiento">
+                        <div class="mx-auto mb-3 rounded-circle bg-secondary d-flex align-items-center justify-content-center" style="width: 120px; height: 120px; overflow: hidden;">
+                            <i class="bi bi-person-fill text-white display-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-1">Especialista en Piel</h5>
+                        <p class="text-primary small mb-2">Dermatocosmiatra & Aux. de Enfermería</p>
+                        <p class="text-muted small">Especialista en el abordaje y control de problemáticas cutáneas complejas como rosácea, piel atípica y piel diabética.</p>
+                    </div>
+                </div>
+                <!-- Profesional 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 text-center shadow-sm p-4 h-100 card-tratamiento">
+                        <div class="mx-auto mb-3 rounded-circle bg-secondary d-flex align-items-center justify-content-center" style="width: 120px; height: 120px; overflow: hidden;">
+                            <i class="bi bi-person-fill text-white display-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-1">Estilista Profesional</h5>
+                        <p class="text-primary small mb-2">Barbería, Peluquería & Estilismo</p>
+                        <p class="text-muted small">Experto en diseño de cortes, técnicas de coloración completa, reflejos, claritos y tratamientos capilares avanzados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN DE PRODUCTOS Y ACCESORIOS -->
+    <section id="productos" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase text-muted small fw-bold">Nuestra Tienda</span>
+                <h2 class="display-6 fw-bold mt-1">Productos & Accesorios Exclusivos</h2>
+                <p class="text-muted">Disponibles en nuestro centro. Consultanos por stock y asesoramiento personalizado.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Categoría 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm card-tratamiento p-3">
+                        <div class="bg-light rounded p-4 text-center mb-3 text-secondary">
+                            <i class="bi bi-capsule background-icon display-4 text-primary"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-2">
+                            <h5 class="fw-bold card-title">Productos Dietarios</h5>
+                            <p class="text-muted small flex-grow-1">Suplementos y productos seleccionados para acompañar tus tratamientos reductores y potenciar tus objetivos de bienestar.</p>
+                            <button class="btn btn-outline-primary w-100 mt-3" onclick="solicitarTurno('Consulta por Productos Dietarios')">Consultar Stock</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categoría 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm card-tratamiento p-3">
+                        <div class="bg-light rounded p-4 text-center mb-3 text-secondary">
+                            <i class="bi bi-scissors background-icon display-4 text-primary"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-2">
+                            <h5 class="fw-bold card-title">Insumos Profesionales</h5>
+                            <p class="text-muted small flex-grow-1">Línea premium de insumos cosmetológicos para la piel y productos profesionales de mantenimiento capilar.</p>
+                            <button class="btn btn-outline-primary w-100 mt-3" onclick="solicitarTurno('Consulta por Insumos Cosmetológicos/Peluquería')">Consultar Stock</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categoría 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm card-tratamiento p-3">
+                        <div class="bg-light rounded p-4 text-center mb-3 text-secondary">
+                            <i class="bi bi-bag-heart background-icon display-4 text-primary"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-2">
+                            <h5 class="fw-bold card-title">Ropa & Accesorios</h5>
+                            <p class="text-muted small flex-grow-1">Espacio de moda con indumentaria informal y accesorios en tendencia seleccionados para sentirte radiante.</p>
+                            <button class="btn btn-outline-primary w-100 mt-3" onclick="solicitarTurno('Consulta por Ropa y Accesorios')">Consultar Catálogo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 border-top">
+                <p class="lead fw-bold text-muted">"Tu consulta es nuestro mayor placer para poder asesorarte en tus tratamientos y lograr un objetivo."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         VENTANAS MODALES (INFORMACIÓN DETALLADA)
+         ========================================== -->
+
+    <!-- Modal HIFU -->
+    <div class="modal fade" id="modalHifu" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">HIFU 22D Max</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Lifting sin cirugía, genera colágeno, tensa y reduce flacidez facial o corporal.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>No apto para embarazadas, lactantes, personas con marcapasos, prótesis metálicas en la zona o procesos oncológicos activos.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('HIFU 22D Max')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Soprano -->
+    <div class="modal fade" id="modalSoprano" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Depilación Definitiva Soprano</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Eliminación del vello de forma indolora gracias a su cabezal frío, mejora la foliculitis y la textura de la piel.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Embarazo, zonas con tatuajes (se protegen), toma de medicamentos fotosensibles o pieles recién bronceadas.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Depilación Soprano Ice')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Criolipolisis -->
+    <div class="modal fade" id="modalCrio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Criolipólisis Plana</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Elimina grasa localizada de forma definitiva mediante la cristalización y muerte celular del adipocito por frío.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Embarazo, lactancia, afecciones relacionadas con el frío (Crioglobulinemia), hernias en la zona o alteraciones hepáticas/renales.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Criolipólisis Plana')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modelado Corporal -->
+    <div class="modal fade" id="modalModelado" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Body Up, Velaslim, Lipoláser y Electroestimulación</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Tonifica fibras musculares profundas, destruye adiposidad con láser diodo y combate la celulitis estimulando el retorno linfático.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Embarazo, DIU de cobre (para corrientes en abdomen), marcapasos, prótesis metálicas cercanas o tromboflebitis.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Modelado Corporal Combinado')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cama Solar -->
+    <div class="modal fade" id="modalCamaSolar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Cama Solar Dr. Müller</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Bronceado estético, uniforme y controlado con tecnología europea de alta calidad.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Menores de 18 años, personas con antecedentes de cáncer de piel, uso de medicamentos fotosensibles o pieles extremadamente blancas.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Cama Solar Dr. Müller')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Masajes Descontracturantes -->
+    <div class="modal fade" id="modalDescontracturante" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Masajes Descontracturantes</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Alivio inmediato de contracturas musculares y tensiones articulares acumuladas por mala postura o estrés.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Estados febriles, infecciones cutáneas, heridas abiertas o fracturas óseas recientes.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Masajes Descontracturantes')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Drenaje -->
+    <div class="modal fade" id="modalDrenaje" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Drenaje Linfático y Post-Operatorio</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Reduce la inflamación y edemas post-quirúrgicos (ej. Abdominoplastias), acelerando la regeneración de tejidos.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Infecciones agudas, tumores malignos no tratados, insuficiencia cardíaca descompensada o trombosis recientes.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Drenajes Post-Operatorios')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dermatocosmiatria -->
+    <div class="modal fade" id="modalCosmiatria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Dermatocosmiatría Especializada</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Tratamiento y control seguro de pieles con afecciones complejas como Rosácea, piel atípica o piel diabética.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Contraindicaciones:</h6><p>Heridas expuestas en el rostro, infecciones bacterianas o herpes activos al momento de la sesión.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Dermatocosmiatría')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pelu Completa -->
+    <div class="modal fade" id="modalPeluCompleta" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Estilismo: Cortes & Color</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Servicios incluidos:</h6><p>Cortes modernos adaptados, coloración completa, retoque de crecimiento, reflejos y claritos profesionales.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Peluquería: Corte y Color')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tratamientos Capilares -->
+    <div class="modal fade" id="modalCapilar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-light"><h5 class="modal-title fw-bold">Nutrición, Botox y Alisados</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Beneficios:</h6><p>Restauración capilar profunda, sellado de cutículas, eliminación del encrespamiento (Anti-frizz) y brillo espejo.</p>
+                    <h6 class="fw-bold text-danger mt-4"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aviso importante:</h6><p>En el caso de alisados químicos tradicionales, no se recomiendan para mujeres embarazadas o lactantes.</p>
+                </div>
+                <div class="modal-footer bg-light border-0"><button type="button" class="btn btn-primary" onclick="solicitarTurno('Tratamiento Capilar/Alisado')">Solicitar Turno</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Flotante General de WhatsApp -->
+    <a href="https://wa.me/543516642537?text=Hola!%20Quiero%20hacer%20una%20consulta%20general." class="btn-whatsapp-flotante" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Nuestro JS personalizado -->
+    <script src="js/script.js"></script>
+</body>
+</html>
