@@ -81,18 +81,44 @@ section {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
+/* Botón flotante de Instagram estilo circular */
+.btn-instagram-flotante {
+    position: fixed;
+    bottom: 80px; /* Se ubica un poco más arriba que el de WhatsApp para no taparse */
+    right: 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto sutil al pasar el mouse */
+.btn-instagram-flotante:hover {
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 /* ==========================================================================
    BOTÓN FLOTANTE DE WHATSAPP
    ========================================================================== */
 .btn-whatsapp-flotante {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     background-color: #25d366;
     color: white;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
