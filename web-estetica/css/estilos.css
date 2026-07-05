@@ -2,10 +2,10 @@
    CONFIGURACIÓN DEL FONDO GENERAL
    ========================================================================== */
 body {
-    background-image: url('../img/FondoDePagina.jpg');
+    background-image: url('../img/fondoDePagina.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2b2b2b;
@@ -15,7 +15,7 @@ body {
    ESTILO DEL LOGO EN LA BARRA DE NAVEGACIÓN
    ========================================================================== */
 .logo-nav {
-    height: 40px; /* Tamaño armónico con el texto del menú */
+    height: 40px;
     width: auto;
     border-radius: 6px;
     object-fit: contain;
@@ -27,48 +27,44 @@ body {
 }
 
 /* ==========================================================================
-   SECCIONES Y CONTENEDORES (Para dar armonía y legibilidad)
+   SECCIONES Y CONTENEDORES
    ========================================================================== */
 section {
-    /* Les damos un tinte blanco sutil encima del fondo para que no sature */
     background-color: rgba(255, 255, 255, 0.4) !important;
-    backdrop-filter: blur(4px); /* Suaviza el fondo por detrás de la sección */
+    backdrop-filter: blur(4px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Secciones que antes eran grises pesadas ahora se traslucen de forma armónica */
 .bg-light {
     background-color: rgba(248, 249, 250, 0.5) !important;
     backdrop-filter: blur(6px);
 }
 
 /* ==========================================================================
-   TARJETAS (CARDS) DE TRATAMIENTOS, STAFF Y TIENDA
+   TARJETAS (CARDS)
    ========================================================================== */
 .card-tratamiento, .card {
-    background-color: rgba(255, 255, 255, 0.85) !important; /* Blanco con 15% de transparencia */
+    background-color: rgba(255, 255, 255, 0.85) !important;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    border-radius: 16px !important; /* Formas redondeadas modernas */
+    border-radius: 16px !important;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
-/* Efecto al pasar el mouse encima de las tarjetas */
 .card-tratamiento:hover, .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.12) !important;
     background-color: rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Redondear esquinas superiores de las fotos en tarjetas */
 .card-img-top {
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
 }
 
 /* ==========================================================================
-   PESTAÑAS (NAV PILLS) COMPORTAMIENTO VISUAL
+   PESTAÑAS (NAV PILLS)
    ========================================================================== */
 .nav-pills .nav-link {
     color: #4a4a4a;
@@ -80,7 +76,7 @@ section {
 }
 
 .nav-pills .nav-link.active {
-    background-color: #212529 !important; /* Color oscuro elegante activo */
+    background-color: #212529 !important;
     color: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
